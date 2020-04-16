@@ -8,8 +8,10 @@ optimization methods for neural network training (SGD, Adam, etc.).
 The `mnist_tf` directory contains a TensorFlow-based neural network for the
 MNIST dataset. The network is trained using optimizers from the `sqgn` module.
 This example demonstrates how the different optimizers can be called, and it can
-be used to compare their convergence and computational performance. The script
-`mnist_tf.py` supports the following command line arguments:
+be used to compare their convergence and computational performance.
+
+## Optimizer selection and configuration
+The script `mnist_tf.py` supports the following command line arguments:
 
 *  `-num_data`
 
@@ -72,5 +74,25 @@ be used to compare their convergence and computational performance. The script
     Number of mini-batches between updates of the approximation to the Hessian
     or the Gauss-Newton operator
     (default: 1)
+    
+## Examples
+While the optimization algorithms and the results obtain with them are stochastic, the following example configurations can serve as a starting point for experiments. If the default value for an option is suitable for the given optimizer, the corresponding command line argument is not shown. Please see above for the default values.
 
+*   `./mnist_tf -opt_name sgd -lr 1.0e-2`
+
+    SGD with a learning rate of 0.01
+    
+*   `./mnist_tf -opt_name sgd -lr 1.0e-2 -grad_agg svrg`
+
+    SVRG (SGD with variance reduction) with a learning rate of 0.01
+    
+*   `./mnist_tf -opt_name adam -lr 1.0e-2`
+
+    Adam with a learning rate of 0.01
+    
+*   `./mnist_tf -opt_name sqgn -grad_agg svrg -lr 1.0e-1`
+
+    SQGN with variance reduction and a learning rate of 0.1
+
+## Compatibility
 All code is based on Python 3 and TensorFlow 1.6.0.
