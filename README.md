@@ -1,6 +1,10 @@
 # Neural network training with a stochastic quasi-Gauss-Newton method
 
-This repository contains the implementation of the stochastic quasi-Gauss-Newton method presented and evaluated in our paper entitled *Deep Neural Network Learning with Second-Order Optimizers - a Practical Study with a Stochastic Quasi-Gauss-Newton Method*, available on [ArXiv](https://arxiv.org/abs/2004.03040).
+This repository contains the implementation of the stochastic quasi-Gauss-Newton
+method presented and evaluated in our paper entitled *Deep Neural Network
+Learning with Second-Order Optimizers - a Practical Study with a Stochastic
+Quasi-Gauss-Newton Method*, available on
+[ArXiv](https://arxiv.org/abs/2004.03040).
 
 The `sqgn` directory contains a Python module that implements SQGN and other
 optimization methods for neural network training (SGD, Adam, etc.).
@@ -76,7 +80,11 @@ The script `mnist_tf.py` supports the following command line arguments:
     (default: 1)
     
 ## Examples
-While the optimization algorithms and the results obtain with them are stochastic, the following example configurations can serve as a starting point for experiments. If the default value for an option is suitable for the given optimizer, the corresponding command line argument is not shown. Please see above for the default values.
+While the optimization algorithms and the results obtain with them are
+stochastic, the following example configurations can serve as a starting point
+for experiments. If the default value for an option is suitable for the given
+optimizer, the corresponding command line argument is not shown. Please see
+above for the default values.
 
 *   `./mnist_tf -opt_name sgd -lr 1.0e-2`
 
