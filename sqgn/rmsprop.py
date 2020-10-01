@@ -6,7 +6,9 @@ Author: Christopher Thiele
 
 from sqgn.optimizer import Optimizer
 
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 class RMSprop(Optimizer):
   def __init__(self, loss, weights, conf=None, sess=None):

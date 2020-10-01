@@ -4,7 +4,9 @@ gradient_aggregator.py - Implementation of variance reduction methods.
 Author: Christopher Thiele
 """
 
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 class GradientAggregator:
   """Abstract gradient aggregator base class."""

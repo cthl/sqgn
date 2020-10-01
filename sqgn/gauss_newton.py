@@ -5,7 +5,9 @@ gauss_newton.py - Shared functions for the implementation of Gauss-Newton
 Author: Christopher Thiele
 """
 
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 def JTJv(residual, n, xs, vs):
   """

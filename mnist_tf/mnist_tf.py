@@ -6,7 +6,10 @@ import argparse
 from functools import reduce
 import sys
 
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+print(tf.__version__)
 import numpy as np
 import scipy.io
 
